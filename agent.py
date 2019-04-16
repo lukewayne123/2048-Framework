@@ -81,6 +81,9 @@ class random_agent(agent):
         random.shuffle(seq)
         return
 
+    def close_episode(self, ep, flag = ""):
+        return 
+
 
 class weight_agent(agent):
     """ base agent for agents with weight tables """
