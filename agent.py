@@ -137,7 +137,7 @@ class weight_agent(agent):
         episode = ep[2:].copy()
         # backward
         episode.reverse()
-        for i in range(1, len(episode), 2):
+        #for i in range(1, len(episode), 2):
             ###
             ###   TD learning
             ###   Hint: 1. calculate TD error (notice for the last state)
@@ -209,7 +209,8 @@ class rndenv(random_agent):
             return action()
     
     
-class player(weight_agent):
+class player(random_agent):
+#class player(weight_agent): # should switch to weight_agent
     """
     dummy player
     select a legal action randomly
