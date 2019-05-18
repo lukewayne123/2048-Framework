@@ -43,7 +43,7 @@ class episode:
             return False
         usage = self.millisec() - self.ep_time
         self.ep_state = state
-        record = state, move, reward, usage # state, action, reward, time usage
+        record = board(self.state()), move, reward, usage # state, action, reward, time usage
         self.ep_moves += [record]
         self.ep_score += reward
         return True
