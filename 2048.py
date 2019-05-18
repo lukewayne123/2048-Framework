@@ -59,12 +59,6 @@ if __name__ == '__main__':
             
             stat.open_episode(play.name() + ":" + evil.name())
             game = stat.back()
-            # Environment random pop up two tiles
-            who = game.take_turns(evil, evil)
-            move = who.take_action(game.state())
-            game.apply_action(move)
-            move = who.take_action(game.state())
-            game.apply_action(move)
             while True:
                 # Play and environment plays in turns
                 who = game.take_turns(play, evil)
